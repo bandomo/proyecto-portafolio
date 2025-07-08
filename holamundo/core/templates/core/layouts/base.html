@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    {% block styles %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div class="banner">
+        <img src="{% static 'images/logo-caricia-cielo.png' %}" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">INICIO</a></li>
+            <li><a href="{% url 'somos' %}" class="somos">QUIENES SOMOS</a></li>
+            <li><a href="{% url 'procedimiento' %}">PROCEDIMIENTO</a></li>
+            <li><a href="{% url 'galeria' %}">GALERÍA</a></li>
+            <li><a href="{% url 'ubicacion' %}">UBICACIÓN</a></li>
+        </ul>
+    </nav>
+    <main>
+        <img src="{% static 'images/cielo1.jpg' %}" alt="" class="imagen-fondo">
+        <figure>
+            <!--<img src={% static 'images/image1.jpg' %} alt="figura 1">
+            <figcaption>Paciente acostado</figcaption>-->
+        </figure>
+        <div class="content">
+            {% block content %}{% endblock %}
+            
+        </div>
+        <div>
+            <footer>
+                <p>&copy; Bandomo Solutions. Todos los derechos reservados</p>
+            </footer>
+        </div>
+    </main>
+    {% block sripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends './layouts/base.html' %}
+{% load static %}
+{% block title %}Página inicial{% endblock %}
+{% block content %}
+    <h1>Ubicación</h1>
+    <p>El SPA Caricia del Cielo se encuentra situado dentro del espacio natural que representa la playa Guanabo, 
+        dentro del municipio Habana del Este perteneciente a la capital de todos los cubanos, La Habana
+    </p>
+    <img src="{% static 'images/ubicacion.png' %}" alt="Ubicación del SPA Caricia del cielo" class="imagen-ubicacion">
+{% endblock %}

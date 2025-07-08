@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Mi Portafolio Personal</h1>
-    <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="portfolio">Portafolio</a></li>
-    </ul>
-    <h3>Página Principal</h3>
-    <p>Esta es la página Principal</p>
-</body>
-</html>
+{% extends './layouts/base.html' %}
+{% load static %}
+{% block title %}Página inicial{% endblock %}
+{% block content %}
+    <h1>SPA Caricia del cielo</h1>
+    <img src="{% static 'images/portada.jpg' %}" alt="Foto del área de masages" class="imagen-portada">
+    <p>SPA Caricia del Cielo es un Plan de Negocios, que se propone llenar un espacio social, consistente en proporcionar a los habitantes de la región un punto donde converjan el esparcimiento, la salud y el bienestar físico y mental. Paralelamente, permitirá poner en practica diversas herramientas académicas, tanto teóricas como metodológicas, con un carácter fundamentalmente práctico.</p>
+{% endblock %}

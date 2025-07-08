@@ -1,0 +1,174 @@
+/*variables globales*/
+:root{
+    --color-primary: #2ea3f2;
+    --color-text: #666;
+    --font-main: Montserrat-Regular;
+    --font-text: OpenSans-Regular;
+}
+
+/*reseteo de estilos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main settings */
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+h1{
+    font-family: var(--font-main);
+}
+
+p{
+    font-family: var(--font-text);
+    padding-top: 10px;
+}
+/* End main settings*/
+
+
+/*layout settings*/
+body{
+    min-width: 40vw;
+    background-color: #E3F2FD;
+}
+
+.banner{
+    display: flex;
+    max-width: 100vw;
+    height: 25vh;
+    justify-content: center;
+}
+
+.banner img{
+    min-width: 10vh;
+    min-height: 10vh;
+    max-width: 30vh;
+    max-height: 30vh;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-primary);
+    min-width: 40vw;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    padding: 7px;
+}
+
+nav ul li a:hover{
+    color: var(--color-text);
+}
+
+.somos{
+    align-items: center;
+    padding: 0;
+}
+
+main{
+    position: absolute;
+    max-width: 100vw;
+    width: 100%;
+    min-height: 90vh;
+}
+
+.imagen-fondo{
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;    /* Equivalente a background-size: cover */
+    object-position: center;
+    /*position: absolute;
+    /*z-index: -1;         /* Envía la imagen al fondo */
+}
+
+.content{
+    position: relative;
+    text-align: justify;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.imagen-portada{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    max-height: 50vh;
+    justify-content: center;
+    overflow: hidden; /* Recorta lo que sobresalga */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    padding-bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 25vh;
+}
+
+.imagen-ubicacion{
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+/* Contenedor de la galería */
+.gallery {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espacio entre imágenes */
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Cada item de la galería */
+.gallery-item {
+    width: 300px; /* Ancho fijo para cada imagen */
+    height: 200px; /* Alto fijo */
+    overflow: hidden; /* Recorta lo que sobresalga */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.6); /* Efecto zoom al pasar el mouse */
+}
+
+/* Estilo para las imágenes */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block;
+}

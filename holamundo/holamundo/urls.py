@@ -22,5 +22,10 @@ urlpatterns = [
     #está definiendo que el directorio raiz irá a la función home definida en el archivo urls.py de la aplicación core
     path('', views.home, name='home'),  
     path('portfolio/', views.portfolio, name='portfolio'),
+    path('base/', views.base, name='base'),
+    path('galeria/', views.galeria, name='galeria'),
+    path('procedimiento/', views.procedimiento, name='procedimiento'),
+    path('somos/', views.somos, name='somos'),
+    path('ubicacion/', views.ubicacion, name='ubicacion'),
     path('admin/', admin.site.urls),
 ]
